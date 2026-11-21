@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFDD0"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <!-- Top Brand & Update Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:contentDescription="gretto logo"
+            android:src="@drawable/michmonte1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:text="gretto"
+            android:textColor="#5A3C1E"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Check Updates"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Video Viewport (Replaces SS_BLACKRECT) -->
+    <SurfaceView
+        android:id="@+id/surface_video"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <!-- Seek Bar & Time -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="0:00 / 0:00"
+            android:textColor="#3C2814"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Transport Controls Row 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="6dp">
+
+        <Button android:id="@+id/btn_prev" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:text="|&lt; Prev" android:textColor="#3C2814" android:textSize="11sp" />
+        <Button android:id="@+id/btn_rew"  style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:text="&lt;&lt; 10s" android:textColor="#3C2814" android:textSize="11sp" />
+        <Button android:id="@+id/btn_play" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:text="Play" android:textColor="#3C2814" android:textSize="11sp" />
+        <Button android:id="@+id/btn_pause" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:text="Pause" android:textColor="#3C2814" android:textSize="11sp" />
+        <Button android:id="@+id/btn_stop" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:text="Stop" android:textColor="#3C2814" android:textSize="11sp" />
+        <Button android:id="@+id/btn_fwd"  style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:text="10s &gt;&gt;" android:textColor="#3C2814" android:textSize="11sp" />
+        <Button android:id="@+id/btn_next" style="?android:attr/buttonBarButtonStyle" android:layout_width="0dp" android:layout_height="42dp" android:layout_weight="1" android:text="Next &gt;|" android:textColor="#3C2814" android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- Playlist Actions & Volume -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="4dp">
+
+        <Button
+            android:id="@+id/btn_open"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Open" />
+
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="6dp"
+            android:text="Remove" />
+
+        <TextView
+            android:id="@+id/txt_vol_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Vol 50%"
+            android:textColor="#3C2814"
+            android:textSize="12sp" />
+
+        <SeekBar
+            android:id="@+id/seek_volume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- Playlist Box (Replaces LISTBOX) -->
+    <ListView
+        android:id="@+id/list_playlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="#FFF8B8" />
+
+    <!-- Status Bar -->
+    <TextView
+        android:id="@+id/txt_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="6dp"
+        android:text="Ready. Tap Open to add media files."
+        android:textColor="#3C2814"
+        android:textSize="12sp" />
+</LinearLayout>
